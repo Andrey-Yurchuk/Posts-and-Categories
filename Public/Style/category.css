@@ -1,0 +1,56 @@
+body {
+    background-color: #2d2d2d; /* Цвет фона темный */
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    color: #fff;
+}
+
+h1 {
+    color: #eb7600; /* Оранжевый цвет для заголовка */
+    text-align: center;
+    text-shadow: 2px 2px 3px #000; /* Тень заголовка */
+}
+
+div {
+    background-color: #3a3a3a; /* Цвет фона блока */
+    border: 3px solid #eb7600;  /* Цвет рамки блока и ширина рамки */
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #eb7600; /* Оранжевый цвет для h2 заголовка */
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #fff;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+form input[type="text"] {
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #eb7600; /* Цвет рамки поля ввода */
+    border-radius: 5px; /* Скругление углов поля ввода */
+}
+
+form button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #eb7600; /* Оранжевый цвет кнопки */
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+form button:hover {
+    background-color: #ff8c33; /* Насыщенный оранжевый цвет при наведении */
+}
