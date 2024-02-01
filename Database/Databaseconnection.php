@@ -8,9 +8,6 @@ use PDO;
 use Exception;
 use PDOException;
 
-/**
- * @todo вынести в констаты подключение к БД
- */
 class Databaseconnection implements Database
 {
     private static ?PDO $instance = null;
@@ -34,11 +31,11 @@ class Databaseconnection implements Database
         return self::$instance;
     }
 
-    public static function createConnection(): ?PDO
-    {
+    public static function createConnection(): ?PDO {
         try {
-            $db = new PDO('mysql:host=localhost;dbname=posts_bd',
-                'admin', 'StrongPassword123!');
+            $config = new Databaseconfig();
+            $db = new PDO('mysql:host=' . $config::HOST . ';dbname=' . $config::DBNAME,
+                $config::USER, $config::PASSWORD);
             $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             return $db;
         } catch (PDOException $e) {

@@ -9,10 +9,6 @@ $postsPerPage = 2;
 $paginatedPosts = array_slice($dataPost, ($page - 1) * $postsPerPage, $postsPerPage);
 $totalPages = ceil(count($dataPost) / $postsPerPage);
 
-/**
- * @todo вынести css в отдельный файл и проверить!!!
- */
-
 ?>
 
 <!DOCTYPE html>

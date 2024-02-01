@@ -13,7 +13,7 @@ global $dataPost;
 global $dataCategory;
 
 /**
- * @todo composer и .gitignore => .idea и vendor + Readme.md + дамп бд
+ * @todo composer и .gitignore => vendor + Readme.md
  * @todo вынести в отдельные классы
  */
 
