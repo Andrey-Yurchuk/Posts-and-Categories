@@ -21,6 +21,10 @@ class Category extends Model
 
     public function addCategory($name): void
     {
+        if (empty(($name))) {
+            throw new Exception('Category field is empty');
+        }
+
         $query = "INSERT INTO " . self::TABLE_NAME_CATEGORY . " (name) VALUES (:name)";
         $statement = $this->db->prepare($query);
         $statement->execute(['name' => $name]);

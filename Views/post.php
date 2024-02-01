@@ -16,6 +16,11 @@ require_once "../autoload.php";
 
 <h1>Посты</h1>
 
+<a class="return-home-link" href="/App/index.php">Вернуться на главную страницу</a>
+<br>
+<br>
+<br>
+
 <!-- Форма добавления поста -->
 <form id="addPostForm" action="../autoload.php" method="POST">
     <input type="text" id="postName" name="title" placeholder="Название поста">

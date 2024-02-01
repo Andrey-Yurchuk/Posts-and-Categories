@@ -18,6 +18,11 @@ global $dataCategory;
 
 <h1>Категории</h1>
 
+<a class="return-home-link" href="/App/index.php">Вернуться на главную страницу</a>
+<br>
+<br>
+<br>
+
 <!-- Форма добавления категории -->
 <form id="addCategoryForm" action="../autoload.php" method="POST">
     <input type="text" id="categoryName" name="category" placeholder="Название категории">

@@ -23,6 +23,9 @@ class Post extends Model
 
     public function addPost($title, $content): void
     {
+        if (empty(($title)) || empty(($content))) {
+            throw new Exception('Title or content field is empty');
+        }
         $query = "INSERT INTO " . self::TABLE_NAME_POST . " (title, content, created_at, updated_at) 
                     VALUES (:title, :content, :created_at, :updated_at)";
         $statement = $this->db->prepare($query);

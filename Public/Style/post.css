@@ -30,6 +30,19 @@ p {
     color: #fff;
 }
 
+a.return-home-link {
+    background-color: #a7bd65;
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+a.return-home-link:hover {
+    background-color: #ff9933;
+}
+
 form {
     margin-bottom: 20px;
 }
