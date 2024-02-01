@@ -1,4 +1,4 @@
-# Project "Category and Post"
+# Project "Posts and Categories"
 
 Hey there! In this project, I have created a system that allows adding, deleting, and editing categories, as well 
 as adding, deleting, and editing posts within these categories. The project includes both Frontend and Backend components.
