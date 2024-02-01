@@ -24,6 +24,9 @@ class Category extends Model
         $query = "INSERT INTO " . self::TABLE_NAME_CATEGORY . " (name) VALUES (:name)";
         $statement = $this->db->prepare($query);
         $statement->execute(['name' => $name]);
+
+        header('Location: index.php');
+        exit;
     }
 
     public function updateCategory($id, $name): void
@@ -35,6 +38,9 @@ class Category extends Model
         $query = "UPDATE " . self::TABLE_NAME_CATEGORY . "SET name = :name WHERE id = :id";
         $statement = $this->db->prepare($query);
         $statement->execute(['id' => $id, 'name' => $name]);
+
+        header('Location: index.php');
+        exit;
     }
 
     public function deleteCategory($id): void
@@ -46,6 +52,9 @@ class Category extends Model
         $query = "DELETE FROM " . self::TABLE_NAME_CATEGORY . " WHERE id = :id";
         $statement = $this->db->prepare($query);
         $statement->execute(['id' => $id]);
+
+        header('Location: index.php');
+        exit;
     }
 
     public function getAllCategories(): array
@@ -75,6 +84,9 @@ class Category extends Model
             VALUES (:category_id, :post_id)";
         $statement = $this->db->prepare($query);
         $statement->execute(['category_id' => $categoryId, 'post_id' => $postId]);
+
+        header('Location: index.php');
+        exit;
     }
 
     public function removePostFromCategory($postId, $categoryId): void
@@ -86,6 +98,9 @@ class Category extends Model
             AND post_id = :post_id";
         $statement = $this->db->prepare($query);
         $statement->execute(['category_id' => $categoryId, 'post_id' => $postId]);
+
+        header('Location: index.php');
+        exit;
     }
 }
 

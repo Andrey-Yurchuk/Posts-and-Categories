@@ -8,7 +8,7 @@ use PDO;
 use Exception;
 use PDOException;
 
-class Databaseconnection implements Database
+class Databaseconnection implements Databaseinterface
 {
     private static ?PDO $instance = null;
 

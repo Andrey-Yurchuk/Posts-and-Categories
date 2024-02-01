@@ -29,6 +29,9 @@ class Post extends Model
         $statement->execute(['title' => $title, 'content' => $content,
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s')]);
+
+        header('Location: index.php');
+        exit;
     }
 
     public function updatePost($postId, $newTitle, $newContent): void
@@ -42,6 +45,9 @@ class Post extends Model
         $statement = $this->db->prepare($query);
         $statement->execute(['id' => $postId, 'title' => $newTitle, 'content' => $newContent,
             'updated_at' => date('Y-m-d H:i:s')]);
+
+        header('Location: index.php');
+        exit;
     }
 
     public function deletePost($postId): void
@@ -53,6 +59,9 @@ class Post extends Model
         $query = "DELETE FROM " . self::TABLE_NAME_POST . "  WHERE id = :id";
         $statement = $this->db->prepare($query);
         $statement->execute(['id' => $postId]);
+
+        header('Location: index.php');
+        exit;
     }
 
     public function getAllPosts(): array

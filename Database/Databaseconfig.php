@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Database;
 
-final readonly class Databaseconfig implements Database
+final readonly class Databaseconfig implements Databaseinterface
 {
     public const HOST = 'localhost';
 
